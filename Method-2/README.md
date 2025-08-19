@@ -15,7 +15,7 @@ Storage_Account = "saekhbcp"
 
 *** Cleanup 
 
-terraform apply -var-file ./env/dev.auto.tfvars --auto-approve
+terraform destroy -var-file ./env/dev.auto.tfvars --auto-approve
 
 ```
 ------------------------------------------------------------------------------------------------------------------------
