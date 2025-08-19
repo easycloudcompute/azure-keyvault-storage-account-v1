@@ -57,6 +57,7 @@ module "keyvault" {
   tenant_id                     = "66364818-e17b-4c1a-a1bb-938aa6bcdea9"
   public_network_access_enabled = false
   soft_delete_retention_days    = 7
+
   tags = {
     Environment = "qa"
     Key         = "qa-key"
