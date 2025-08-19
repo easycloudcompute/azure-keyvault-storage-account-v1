@@ -1,6 +1,6 @@
 # Task
 
-## Deploy keyvault and storage account with below details using Terraform module 
+## Deploy Azure KeyVault and Storage-Account with below details using Terraform module 
 
 1. Keyvault in Canada East region with public access disabled and soft delete set to 7 days
 2. Storage account with LRS in Canada Central region with public access disabled 
