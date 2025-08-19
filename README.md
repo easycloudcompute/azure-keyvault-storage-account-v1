@@ -13,7 +13,7 @@
 ```
 terraform init
 terraform validate
-terraform plan ( should see total 12 items to create )
+terraform plan
 terraform apply --auto-approve 
 
 *** Output expected 
