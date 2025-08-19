@@ -3,17 +3,12 @@ output "Resource_Group_Name" {
   value       = azurerm_resource_group.rg.name
 }
 
-output "Storage_Account_with_LRS" {
-  description = "Storage Account in Canada Central"
-  value       = module.sa_1.name
-}
-
-output "Storage_Account_with_RA_GRS" {
-  description = "Storage Account in Canada East"
-  value       = module.sa_2.name
+output "Storage_Account" {
+  description = "Storage Account"
+  value       = module.storage_account.name
 }
 
 output "KeyVault" {
-  description = "KeyVault"
+  description = "Key Vault"
   value       = random_string.keyvault.result
 }
