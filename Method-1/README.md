@@ -7,7 +7,7 @@ terraform validate
 terraform plan
 terraform apply --auto-approve 
 
-*** Output expected 
+*** Expected Output
 
 Storage_Account_with_LRS = "sa1o1e6c4"
 Storage_Account_with_RA_GRS = "sa2o1e6c4"
@@ -17,8 +17,8 @@ Resource_Group_Name = "rg"
 *** Cleanup 
 
 terraform destroy --auto-approve
-```
 
+```
 ------------------------------------------------------------------------------------------------------------------------
 
 ## PIV
