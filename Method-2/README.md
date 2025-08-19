@@ -1,73 +1,58 @@
 
-## Deploy Azure KeyVault and Storage-Account as per below requirements using Terraform module 
-
-1. Keyvault in Canada East region with public access disabled and soft delete set to 7 days
-2. Storage account with LRS in Canada Central region with public access disabled 
-3. Storage account with RA-GRS in Canada East region with public access enabled 
-4. tag with key name env and accepted values are dev,qa,stg,prd
-
-------------------------------------------------------------------------------------------------------------------------
-
 ## Implementation Steps 
+
+- I have assumed storage account with public access as 'dev' and without public access as 'prod' 
+- I have passed -var-file as argument in 'terraform apply' command creating resouces based on environments wrt to given requirements 
 
 ```
 terraform init
 terraform validate
 terraform plan
-terraform apply --auto-approve 
+terraform apply -var-file ./env/dev.auto.tfvars --auto-approve
 
 *** Output expected 
 
-Storage_Account_with_LRS = "sa1o1e6c4"
-Storage_Account_with_RA_GRS = "sa2o1e6c4"
-KeyVault = "euv6q3"
-Resource_Group_Name = "rg"
+KeyVault = "z14wj2"
+Resource_Group_Name = "rg-dev"
+Storage_Account = "saekhbcp"
 
 *** Cleanup 
 
-terraform destroy --auto-approve
-```
+terraform destroy -var-file ./env/dev.auto.tfvars --auto-approve
 
+*** Similarly to deploy other one , execute below command : 
+
+terraform apply -var-file ./env/prod.auto.tfvars --auto-approve
+
+```
 ------------------------------------------------------------------------------------------------------------------------
 
-## Verify
+## PIV
 
 1. Keyvault in Canada East region with public access disabled and soft delete set to 7 days
 
-![Pasted Graphic 4](https://github.com/user-attachments/assets/549c8caf-4cfc-4f20-adfa-07b884a61ec6)
+![image](https://github.com/user-attachments/assets/fe041dbe-c950-4e02-b747-781bd627df87)
 
-![Key vaults](https://github.com/user-attachments/assets/5b8c69b2-304c-42ea-89c2-05c1cc7b1165)
+![image](https://github.com/user-attachments/assets/f87ccc2a-0a20-4e2b-bc0f-09e1af065dee)
 
-![Ill kv-euv6q3  Properties  -](https://github.com/user-attachments/assets/3ac8eb18-d649-4726-ab98-2040d16b2093)
+![image](https://github.com/user-attachments/assets/a50c9989-97d8-40c3-826d-fd358d91ceee)
 ￼￼
 ------------------------------------------------------------------------------------------------------------------------
 
-2. Storage account with LRS in Canada Central region with public access disabled
+2. Storage account with RA-GRS in Canada East region with public access enabled 
 
-![Storage accounts](https://github.com/user-attachments/assets/93a5ed74-2388-4074-9d91-6da50a8aefe5)
+![image](https://github.com/user-attachments/assets/f5c62afe-76e8-40b7-bd44-9e0137ea2f5d)
 
-![Pasted Graphic 9](https://github.com/user-attachments/assets/cf48fea6-c57e-4f1d-9587-ab40a5819cef)
-￼
-![Storage accounts](https://github.com/user-attachments/assets/c2fbdb4a-fce5-4a32-a910-20c9314723d5)
+![image](https://github.com/user-attachments/assets/086d7751-d7d9-49a3-ba74-3a27fef60c6a)
 
-------------------------------------------------------------------------------------------------------------------------
-
-3. Storage account with RA-GRS in Canada East region with public access enabled 
-
-![Pasted Graphic 10](https://github.com/user-attachments/assets/b1abba8f-57c7-4798-b7f8-728705d57e28)
-￼
-![Pasted Graphic 12](https://github.com/user-attachments/assets/14b44eb8-cbbc-46a2-b2e9-7e139f397ce9)
-
-![Pasted Graphic 11](https://github.com/user-attachments/assets/4e6652d4-b377-4661-9153-b818f793eb83)
+![image](https://github.com/user-attachments/assets/ed627540-7f7c-4c57-9d3a-80a7fb63ee11)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-4. tag with key name env and accepted values are dev,qa,stg,prd
+3. tag with key name env and accepted values are dev,qa,stg,prd
 
-![Storage accounts](https://github.com/user-attachments/assets/53c0740c-a741-4e66-915f-41b03198f313)
-￼
-![•sa201e0e4 1ags](https://github.com/user-attachments/assets/801bef7a-384e-480f-9dde-0ce7324bc3d1)
+![image](https://github.com/user-attachments/assets/d574e482-6096-42f2-b42a-123a68c06399)
 
-![Pasted Graphic 15](https://github.com/user-attachments/assets/3896e760-9f68-429a-86e7-aef3f8da7fbf)
+![image](https://github.com/user-attachments/assets/56c9f972-a9df-4f93-8d97-8da6e713d5fa)
 
 ------------------------------------------------------------------------------------------------------------------------
