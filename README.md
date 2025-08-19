@@ -1,5 +1,3 @@
-Setting up Azure KeyVault and Storage Accounts - v1
-
 # Task
 
 ## Deploy keyvault and storage account with below details using Terraform module 
