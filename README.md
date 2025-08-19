@@ -9,8 +9,9 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-## Steps 
+#Steps 
 
+```
 terraform init
 terraform validate
 terraform plan ( should see total 12 items to create )
@@ -26,6 +27,7 @@ Resource_Group_Name = "rg"
 *** Cleanup 
 
 terraform destroy --auto-approve
+```
 
 ------------------------------------------------------------------------------------------------------------------------
 
