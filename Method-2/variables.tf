@@ -1,30 +1,19 @@
-variable "rg_location" {
-  description = "Resource Group"
-  type        = string
-  default     = "canadacentral"
+variable "replication_type" {
+  type = string
 }
 
-variable "keyvault_location" {
-  type    = string
-  default = "canadaeast"
+variable "environment_name" {
+  type = string
 }
 
-variable "sa_1_location" {
-  type    = string
-  default = "canadacentral"
+variable "primary_location" {
+  type = string
 }
 
-variable "sa_2_location" {
-  type    = string
-  default = "canadaeast"
+variable "public_network_access_enabled" {
+  type = bool
 }
 
-variable "replication_sa_1" {
-  type    = string
-  default = "LRS"
-}
-
-variable "replication_sa_2" {
-  type    = string
-  default = "RAGRS"
+variable "tags" {
+  type = map(string)
 }
