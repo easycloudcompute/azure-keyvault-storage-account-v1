@@ -35,7 +35,7 @@ module "keyvault" {
   version                       = "0.10.1"
   name                          = "kv-${random_string.keyvault.result}"
   resource_group_name           = azurerm_resource_group.rg.name
-  location                      = var.primary_location
+  location                      = var.keyvault_location
   tenant_id                     = "xxxx" # Enter your tenant id here
   public_network_access_enabled = false
   soft_delete_retention_days    = 7
