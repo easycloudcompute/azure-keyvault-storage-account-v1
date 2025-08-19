@@ -17,3 +17,8 @@ variable "public_network_access_enabled" {
 variable "tags" {
   type = map(string)
 }
+
+variable "keyvault_location" {
+  type    = string
+  default = "canadaeast"
+}
