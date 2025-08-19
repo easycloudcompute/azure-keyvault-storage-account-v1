@@ -8,7 +8,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Implementation Steps 
+## Implementation Steps 
 
 ```
 terraform init
@@ -30,7 +30,7 @@ terraform destroy --auto-approve
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Verify
+## Verify
 
 1. Keyvault in Canada East region with public access disabled and soft delete set to 7 days
 
@@ -71,11 +71,3 @@ terraform destroy --auto-approve
 ![Pasted Graphic 15](https://github.com/user-attachments/assets/3896e760-9f68-429a-86e7-aef3f8da7fbf)
 
 ------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
