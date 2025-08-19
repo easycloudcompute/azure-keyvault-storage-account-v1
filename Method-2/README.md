@@ -1,6 +1,8 @@
 
 ## Implementation Steps 
 
+- Here I have assumed the storage account with public access enabled as the one residing in 'dev' env and one without public access as 'prod'
+
 ```
 terraform init
 terraform validate
