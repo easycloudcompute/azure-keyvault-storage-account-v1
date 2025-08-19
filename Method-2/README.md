@@ -20,7 +20,7 @@ Storage_Account = "saekhbcp"
 
 terraform destroy -var-file ./env/dev.auto.tfvars --auto-approve
 
-*** Similarly perform for the other one 
+*** Similarly to deploy other one , execute below command : 
 
 terraform apply -var-file ./env/prod.auto.tfvars --auto-approve
 
