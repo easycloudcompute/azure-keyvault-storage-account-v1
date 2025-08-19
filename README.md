@@ -1,8 +1,8 @@
 Setting up Azure KeyVault and Storage Accounts - v1
 
-# Task
+## Task
 
-- Deploy keyvault and storage account with below details using Terraform module 
+# Deploy keyvault and storage account with below details using Terraform module 
 
 1. Keyvault in Canada East region with public access disabled and soft delete set to 7 days
 2. Storage account with LRS in Canada Central region with public access disabled 
@@ -11,7 +11,7 @@ Setting up Azure KeyVault and Storage Accounts - v1
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Steps 
+## Steps 
 
 terraform init
 terraform validate
@@ -31,7 +31,7 @@ terraform destroy --auto-approve
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Verify
+## Verify
 
 1. Keyvault in Canada East region with public access disabled and soft delete set to 7 days
 
