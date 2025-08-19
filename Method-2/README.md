@@ -1,7 +1,7 @@
 
 ## Implementation Steps 
 
-- Here I have assumed the storage account with public access enabled as the one residing in 'dev' env and one without public access as 'prod'
+- Here I have assumed the storage account with public access as 'dev' env and without public access as 'prod' and passed -var-file as argument in 'terraform apply' command creating resouces based on environments wrt to given requirements 
 
 ```
 terraform init
